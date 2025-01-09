@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lemon Eyes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="20-20-2 Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Intro</a></li>
+                <li class="nav-item"><a class="nav-link" href="#explain">Explanation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#image">Comparison</a></li>
+                <li class="nav-item"><a class="nav-link" href="#stats">Statistics</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rule">20-20-2 Rule</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hidden-costs">Hidden Costs</a></li>
+                <li class="nav-item"><a class="nav-link" href="#symptoms">Symptoms</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tips">Tips & Media</a></li>
+            </ul>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/english">EN</a>
+                <a class="nav-item nav-link" href="/">NL</a>
+            </div>
+        </div>
+    </nav>
+
+    <div id="top" class="container hero">
+        <div class="row d-flex flex-column-reverse flex-md-row">
+            <div class="col-12 col-md-6 order-2 order-md-1 text-content mb-3 mb-md-0">
+                <div class="content">
+                    <h1>Shaping behaviour toward a world without lemon eyes</h1>
+                    <p>As the prevalence of myopia increases, it is crucial to educate people about its risks and teach them preventative measures. This website aims to give people the information and resources to combat myopia.</p>
+                    <a href="#explain" class="btn btn-start">Learn What You Can Do!</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 order-1 order-md-2 image-content">
+                <img src="{{ url_for('static', filename='images/lemoneyes-person.png') }}" alt="Cartoon of a person with lemons as eyes" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div id="explain" class="video">
+        <div class="row d-flex flex-column-reverse flex-md-row">
+            <div class="col-12 col-md-6 order-1 order-md-2 video-image">
+                <img src="{{ url_for('static', filename='images/girl-on-phone.png') }}" alt="New Page Image">
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 video-content mb-3 mb-md-0">
+                <h2>Why Lemon Eyes?</h2>
+                <p>Nearsightedness, or myopia, occurs when nearby objects appear clear but distant ones appear blurry. This occurs because the eyes become elongated, resembling a lemon. Light should focus directly on the retina, but with myopia, it falls in front of it, causing blurriness. Myopia is becoming more common, with projections suggesting nearly half the world's population will have it by 2050. Developing healthier habits can help prevent its progression.</p>
+            <br>
+                <h2>What's The Problem?</h2>
+                <p>With bad management, nearsightedness can lead to different eye diseases like cataracts, glaucoma, myopic macular degeneration and retinal detachment. These diseases only occur later in life, but will start forming at a younger age.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="image" class="image-slider">
+      <div class="image-content"><h2>What does someone with high myopia (-6D) see?</h2></div>
+      <div class="slider-wrapper">
+          <img id="clearImage" src="{{ url_for('static', filename='images/bus.jpg') }}" alt="Clear Bus">
+          <img id="blurryImage" src="{{ url_for('static', filename='images/bus blurry.png') }}" alt="Blurry Bus">
+          <div id="slider" class="slider">
+              <div class="handle">
+                <div class="vertical-bar"></div>
+                <div class="text-balloon left">Myopia</div>
+                <div class="text-balloon right">Normal</div>
+                <span class="arrow left">&#9664;</span>
+                <span class="arrow right">&#9654;</span>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div id="stats" class="stats">
+        <div class="stats-content">
+            <div class="row d-flex flex-column-reverse flex-md-row">
+            <div class="col-12 col-md-6 order-1 order-md-2 graph">
+                <img src="{{ url_for('static', filename='images/graph.png') }}" alt="Graph of Myopia">
+            </div>
+            <div class="col-12 col-md-6 order-2 order-md-1 info mb-3 mb-md-0">
+                <p>28% of the world's population suffered from myopia in 2010, which equals 1.95 billion people. 50% of the population are expected to be myopic by 2050, which would equal 4.76 billion people. 938 million people are predicted to suffer from high myopia (-6D or worse) by 2050, which puts them at more risk of serious eye conditions.
+                    <br>But how would we be able to stop this from happening?</p>
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <div id="rule" class="rule">
+        <div id="firstRuleContent" class="rule-content active">
+            <img src="{{ url_for('static', filename='images/20-20-2-explain.png') }}" alt="20-20-2 Explanation" class="img-fluid">
+        </div>
+        <div id="secondRuleContent" class="rule-content">
+            <div class="rule-details">
+                <div class="rule-item">
+                    <h3>20 Minutes</h3>
+                    <p>After 20 minutes of looking at something close by, like reading, being on your phone, or working at a distance less than about 30 centimetres, give your eyes some rest by... →</p>
+                </div>
+                <div class="rule-item">
+                    <h3>20 Seconds</h3>
+                    <p>Looking away into the distance for 20 seconds. Look outside through your window or at something at the other end of the room. This gives your eyes some rest after being strained from focusing toward something nearby. →</p>
+                </div>
+                <div class="rule-item">
+                    <h3>2 Hours</h3>
+                    <p>And let your kid be outside for at least 2 hours per day. The light emitted by the sun is far greater than humans can produce inside. This amount of light is great for eye growth 6-12 years old. →</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hidden-costs-mobile" class="hidden-costs-mobile">
+      <div class="costs-content-mobile">
+          <div class="text-box-m" id="box-1-m">
+              <h1>Associated<br>costs of myopia</h1>
+          </div>
+          <div class="slide-container-mobile">
+              <div class="slide-mobile active" id="slide-1-mobile">
+                  <div class="icon-mobile">
+                      <img src="{{ url_for('static', filename='images/icons/correction-icon.png') }}" alt="Corrections" class="img-fluid">
+                  </div>
+                  <div class="icon-text-mobile">
+                      <p>Corrections</p>
+                  </div>
+                  <div class="slide-content-mobile">
+                      <p>Glasses and other corrections can help with mitigating the problem, but they don’t slow down the progression of myopia. Depending on the brand and prescription glasses have a higher upfront cost. Contact lenses or Ortho-K lenses have a more frequent cost.</p>
+                  </div>
+              </div>
+              <div class="slide-mobile" id="slide-2-mobile">
+                  <div class="icon-mobile">
+                      <img src="{{ url_for('static', filename='images/icons/practitioner-icon.png') }}" alt="Practitioner Visits" class="img-fluid">
+                  </div>
+                  <div class="icon-text-mobile">
+                      <p>Practitioner Visits</p>
+                  </div>
+                  <div class="slide-content-mobile">
+                      <p>Regular check-ups with ophthalmologists are necessary to monitor the progression. Yearly prescription checks are recommended.</p>
+                  </div>
+              </div>
+              <div class="slide-mobile" id="slide-3-mobile">
+                  <div class="icon-mobile">
+                      <img src="{{ url_for('static', filename='images/icons/productivity-icon.png') }}" alt="Loss of Productivity" class="img-fluid">
+                  </div>
+                  <div class="icon-text-mobile">
+                      <p>Loss of Productivity</p>
+                  </div>
+                  <div class="slide-content-mobile">
+                      <p>Headaches and blurry vision can reduce productivity at work or school, leading to indirect costs down the line.</p>
+                  </div>
+              </div>
+              <div class="slide-mobile" id="slide-4-mobile">
+                  <div class="icon-mobile">
+                      <img src="{{ url_for('static', filename='images/icons/surgery-icon.png') }}" alt="Surgeries" class="img-fluid">
+                  </div>
+                  <div class="icon-text-mobile">
+                      <p>Surgeries</p>
+                  </div>
+                  <div class="slide-content-mobile">
+                      <p>In severe cases, surgical procedures may be required to correct vision, leading to high medical costs. Surgeries can sometimes come at the risk of side effects and complications.</p>
+                  </div>
+              </div>
+              <div class="slide-mobile" id="slide-5-mobile">
+                  <div class="icon-mobile">
+                      <img src="{{ url_for('static', filename='images/icons/psycho-icon.png') }}" alt="Psychological Impact" class="img-fluid">
+                  </div>
+                  <div class="icon-text-mobile">
+                      <p>Psychological Impact</p>
+                  </div>
+                  <div class="slide-content-mobile">
+                      <p>The frustrations from dealing with vision problems can affect mental health. Stress can come in the form of prices being too high, or even self-consciousness of inability see texts in the distance.</p>
+                  </div>
+              </div>
+              <div class="slide-mobile" id="slide-0-mobile">
+                  <div class="icon-mobile">
+                      <img src="{{ url_for('static', filename='images/icons/diseas-icon.png') }}" alt="Diseas" class="img-fluid">
+                  </div>
+                  <div class="icon-text-mobile">
+                      <p>Eye Diseases</p>
+                  </div>
+                  <div class="slide-content-mobile">
+                      <p>Myopia can lead to several eye diseases, such as cataracts, glaucoma, myopic macular degeneration and retinal detachment. These diseases only emerge later in life, but begin to form at an early age.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="navigation-buttons-mobile">
+              <button id="prev-slide-mobile" class="btn btn-secondary">Previous</button>
+              <button id="next-slide-mobile" class="btn btn-secondary">Next</button>
+          </div>
+      </div>
+  </div>
+  
+  
+  
+  
+
+
+<div id="symptoms" class="symptoms">
+    <div class="symptoms-content">
+            <h2>Symptoms of Myopia</h2> 
+
+            
+            
+
+            <section class="carousel-section" style="background-color: #f5f5f5; align-items: center; align-content: center;">
+                <div id="cCarousel">
+                <div class="arrow" id="prev"><i class="fa-solid fa-chevron-left"></i></div>
+                <div class="arrow" id="next"><i class="fa-solid fa-chevron-right"></i></div>
+            
+                <div id="carousel-vp">
+                    <div id="cCarousel-inner">
+            
+                    <article class="cCarousel-item">
+                        <img src="https://em-content.zobj.net/source/apple/391/face-with-head-bandage_1f915.png" alt="Headache">
+                        <div class="infos">
+                        <h3>Headache</h3>
+                        </div>
+                    </article>
+            
+                    <article class="cCarousel-item">
+                        <img src="https://em-content.zobj.net/source/apple/391/persevering-face_1f623.png" alt="Constant Squinting">
+                        <div class="infos">
+                        <h3>Constant Squinting</h3>
+                        </div>
+                    </article>
+            
+                    <article class="cCarousel-item">
+                        <img src="https://em-content.zobj.net/source/apple/391/eyes_1f440.png" alt="Eye Strain">
+                        <div class="infos">
+                        <h3>Eye Strain</h3>
+                        </div>
+                    </article>
+            
+                    <article class="cCarousel-item">
+                        <img src="https://em-content.zobj.net/source/apple/391/see-no-evil-monkey_1f648.png" alt="Rubbing eyes too often">
+                        <div class="infos">
+                        <h3>Rubbing Eyes Too Often</h3>
+                        </div>
+                    </article>
+            
+                    <article class="cCarousel-item">
+                        <img src="https://em-content.zobj.net/source/apple/391/face-with-spiral-eyes_1f635-200d-1f4ab.png" alt="Blurry Vision">
+                        <div class="infos">
+                        <h3>Blurry Vision</h3>
+                        </div>
+                    </article>
+            
+                    <article class="cCarousel-item">
+                        <img src="https://em-content.zobj.net/source/apple/391/selfie_1f933.png" alt="Sitting too close to the screen">
+                        <div class="infos">
+                        <h3>Sitting Too Close To The Screen</h3>
+                        </div>
+                    </article>
+                    
+                </div>
+                </div>
+            </section>
+    </div>
+    </div>
+    
+    <div class="tips-content">
+        <h2>Tips to Help Kids Implement the 20-20-2 Rule</h2>
+    </div>
+    
+    <div id="tips" class="tips">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/1.png') }}" alt="Implement the 20-20-2 rule" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#1</h1>
+                    <p style="font-size: 0.85rem;">Start using the 20-20-2 rule that has been explained previously.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/2.png') }}" alt="Set timers for 20 minutes" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#2</h1>
+                    <p style="font-size: 0.85rem;">Start small with the help of setting timers or alarms every 20 minutes as a reminder to give your eyes a break from screen time.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/3.png') }}" alt="Make it a habit" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#3</h1>
+                    <p style="font-size: 0.85rem;">Start by implementing the 20-20-2 rule as a habit, once established this will be a part of your children’s daily routine.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/4.png') }}" alt="Educate your children" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#4</h1>
+                    <p style="font-size: 0.85rem;">Explain the 20-20-2 rule to your children to educate them about keeping their eye healthy and the consequences of myopia.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/5.png') }}" alt="Encourage outdoor play" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#5</h1>
+                    <p style="font-size: 0.85rem;">Motivate your children to play outside. Not only does this meet the daily 2 hours being outdoors, but it also contributes to the overall physical well-being.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/6.png') }}" alt="Limit screen time" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#6</h1>
+                    <p style="font-size: 0.85rem;">Keep track of how much time your child spends in front of screens and set limits if necessary and encourage them to engage in non-screen activities.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/7.png') }}" alt="Know what to do in the 20 seconds" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#7</h1>
+                    <p style="font-size: 0.85rem;">Be creative in turning the 20 second break and 2 hours outdoor time fun. This could just be small like playing a little game of spotting or going on a picnic and paint with nature.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/8.png') }}" alt="Designate break spaces" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#8</h1>
+                    <p style="font-size: 0.85rem;">Designate areas in the classroom where students can go to focus their eyes on something far away, like a window with a view during their break.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/9.png') }}" alt="Plan outdoor lessons at school" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#9</h1>
+                    <p style="font-size: 0.85rem;">Make classes more fun by holding it outdoors  or incorporating outdoor activities whenever possible.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+    
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/10.png') }}" alt="Optimize layout of classrooms" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#10</h1>
+                    <p style="font-size: 0.85rem;">Ensure that your classroom is well-lit and that digital screens are positioned appropriately to reduce glare and prevent students from sitting too close to the screens.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/11.png') }}" alt="Regularly ask for feedback" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#11</h1>
+                    <p style="font-size: 0.85rem;">Regularly seek feedback from students about the eye care practices in the classroom and be flexible to adjust towards their feedback.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="{{ url_for('static', filename='images/tips/cards_english/12.png') }}" alt="Be a good role model" style="width:300px;height:182px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>#12</h1>
+                    <p style="font-size: 0.85rem;">Children follow things they observe, therefore, practising the 20-20-2 rule yourself will encourage your children to participate too.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+      </div>
+
+
+
+<div id="footer" class="footer">
+    <div class="container d-flex justify-content-between">
+        <div id="contacts" class="footer-item">
+            <h2>Contact Us</h2>
+            <p>Email:</p>
+            <p>Phone:</p>
+            <p>Address:</p>
+        </div>
+
+        <div id="credits" class="footer-item">
+          <h2>Credits</h2>
+          <p>Mark Temchenko</p>
+          <p>Merijn Vervoorn</p>
+          <p>Viktor Nobel</p>
+          <p>Nikko Chy</p>
+          <p>Felicia Christy Leo</p>
+          <p>Alejandro Berges Coronel</p>
+      </div>
+
+        <div id="Downloads" class="footer-item">
+          <h2>Downloads</h2>
+          <ul>
+              <li><a href=".\static\Myopia Slides for Teachers.pptx" target="_blank" class="btn btn-dark" role="button">Presentation for teachers</a></li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+
+
+        
+
+        /*Rule*/
+        document.addEventListener('scroll', function() {
+        const ruleItems = document.querySelectorAll('.rule-item');
+        ruleItems.forEach((item, index) => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 200); // Stagger the fade-in effect
+            } else {
+                item.classList.remove('visible');
+            }
+        });
+    });
+
+        
+    document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide-mobile');
+    const prevButton = document.getElementById('prev-slide-mobile');
+    const nextButton = document.getElementById('next-slide-mobile');
+    let currentSlideIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            if (i === index) {
+                slide.classList.add('active');
+            } else {
+                slide.classList.remove('active');
+            }
+        });
+    }
+
+    function nextSlide() {
+        currentSlideIndex = (currentSlideIndex + 1) % slides.length;
+        showSlide(currentSlideIndex);
+    }
+
+    function prevSlide() {
+        currentSlideIndex = (currentSlideIndex - 1 + slides.length) % slides.length;
+        showSlide(currentSlideIndex);
+    }
+
+    prevButton.addEventListener('click', prevSlide);
+    nextButton.addEventListener('click', nextSlide);
+
+    // Initialize the first slide as "corrections"
+    showSlide(currentSlideIndex);
+});
+
+
+
+
+        /*Tips*/
+        function toggleExpand(element) {
+    const tipItems = document.querySelectorAll('.tip-item');
+
+    if (element.classList.contains('expanded')) {
+        element.classList.remove('expanded');
+        tipItems.forEach(item => item.classList.remove('hidden'));
+    } else {
+        tipItems.forEach(item => {
+            if (item !== element) item.classList.add('hidden');
+        });
+        element.classList.add('expanded');
+    }
+}
+
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
+
+let carouselVp = document.querySelector("#carousel-vp");
+
+let cCarouselInner = document.querySelector("#cCarousel-inner");
+let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+
+let leftValue = 0;
+
+// Variable used to set the carousel movement value (card's width + gap)
+const totalMovementSize =
+  parseFloat(
+    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
+    10
+  ) +
+  parseFloat(
+    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
+    10
+  );
+
+prev.addEventListener("click", () => {
+  if (!leftValue == 0) {
+    leftValue -= -totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+  }
+});
+
+next.addEventListener("click", () => {
+  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
+  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
+    leftValue -= totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+  }
+});
+
+const mediaQuery510 = window.matchMedia("(max-width: 510px)");
+const mediaQuery770 = window.matchMedia("(max-width: 770px)");
+
+mediaQuery510.addEventListener("change", mediaManagement);
+mediaQuery770.addEventListener("change", mediaManagement);
+
+let oldViewportWidth = window.innerWidth;
+
+function mediaManagement() {
+  const newViewportWidth = window.innerWidth;
+
+  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
+    leftValue += totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+    oldViewportWidth = newViewportWidth;
+  } else if (
+    leftValue <= -totalMovementSize &&
+    oldViewportWidth > newViewportWidth
+  ) {
+    leftValue -= totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+    oldViewportWidth = newViewportWidth;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  function scrollToElement(element, offset = 0) {
+    const headerHeight = document.querySelector('nav').offsetHeight;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerHeight - offset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  // Add event listener to the "Visuals" link in the navbar
+  document.querySelector('a[href="#image"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetElement = document.querySelector('#image');
+    scrollToElement(targetElement, 20); // Add some extra offset if needed
+  });
+  const clearImage = document.getElementById('clearImage');
+  const blurryImage = document.getElementById('blurryImage');
+  const slider = document.getElementById('slider');
+  const handle = slider.querySelector('.handle');
+  const sliderWrapper = document.querySelector('.slider-wrapper');
+
+  let isDragging = false;
+
+  // Initial split of the images
+  function updateClip(offsetX) {
+    blurryImage.style.clip = `rect(0, ${offsetX}px, auto, 0)`;
+  }
+
+  // Start with the slider in the middle
+  function centerSlider() {
+    const initialOffsetX = sliderWrapper.offsetWidth / 2;
+    updateClip(initialOffsetX);
+    slider.style.left = initialOffsetX + 'px';
+  }
+
+  // Center the slider on initial load and on window resize
+  centerSlider();
+  window.addEventListener('resize', centerSlider);
+
+  slider.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    e.preventDefault();  // Prevent text selection
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      let rect = sliderWrapper.getBoundingClientRect();
+      let offsetX = e.clientX - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      slider.style.left = offsetX + 'px';
+      updateClip(offsetX);
+    }
+  });
+
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
+  });
+
+  sliderWrapper.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    e.preventDefault();  // Prevent text selection
+  });
+
+  document.addEventListener('touchmove', function(e) {
+    if (isDragging) {
+      let touch = e.touches[0];
+      let rect = sliderWrapper.getBoundingClientRect();
+      let offsetX = touch.clientX - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      slider.style.left = offsetX + 'px';
+      updateClip(offsetX);
+    }
+  });
+
+  document.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+});
+
+
+
+
+    </script>
+</body>
+</html>
+</body>
+</html>

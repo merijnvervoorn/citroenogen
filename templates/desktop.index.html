@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Citroenogen</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="{{ url_for('static', filename='images/logo.png') }}" alt="20-20-2 Logo"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Intro</a></li>
+                <li class="nav-item"><a class="nav-link" href="#explain">Uitleg</a></li>
+                <li class="nav-item"><a class="nav-link" href="#image">Vergelijking</a></li>
+                <li class="nav-item"><a class="nav-link" href="#stats">Statistieken</a></li>
+                <li class="nav-item"><a class="nav-link" href="#rule">20-20-2 Regel</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hidden-costs">Verborgen Kosten</a></li>
+                <li class="nav-item"><a class="nav-link" href="#symptoms">Symptomen</a></li>
+                <li class="nav-item"><a class="nav-link" href="#tips">Tips & Media</a></li>
+            </ul>
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/english">EN</a>
+                <a class="nav-item nav-link" href="/">NL</a>
+            </div>
+        </div>
+    </nav>
+
+   <div id="top" class="container hero">
+    <div class="row d-flex flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-6 order-2 order-md-1 text-content mb-3 mb-md-0">
+            <div class="content">
+                <h1>Gedrag veranderen naar een wereld zonder citroenogen</h1>
+                <p>Door de sterke toename van bijziendheid is het van cruciaal belang om mensen voor te lichten over de risico’s hiervan en hen preventieve maatregelen aan te leren. Het doel van deze website is om mensen deze informatie te geven om bijziendheid te bestrijden.</p>
+                <a href="#explain" class="btn btn-start">Leer meer over wat jij kan doen!</a>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 order-1 order-md-2 image-content">
+            <img src="{{ url_for('static', filename='images/lemoneyes-person.png') }}" alt="Cartoon of a person with lemons as eyes" class="img-fluid">
+        </div>
+    </div>
+</div>
+
+
+    <div id="explain" class="video">
+      <div class="row d-flex flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-6 order-1 order-md-2 video-image">
+            <img src="{{ url_for('static', filename='images/girl-on-phone.png') }}" alt="New Page Image">
+        </div>
+        <div class="col-12 col-md-6 order-2 order-md-1 video-content mb-3 mb-md-0">
+                <h2>Waarom Citroenogen?</h2>
+                <p>Bijziendheid, of myopie, is het wazig zien van voorwerpen op afstand, maar dingen die dichtbij staan wel scherp te kunnen zien. Dit gebeurt omdat de ogen langwerpig worden en dus op een citroen gaan lijken. Licht zou direct op het netvlies moeten vallen, maar bij bijziendheid valt het hier juist voor. Hierdoor ontstaat wazigheid. Bijziendheid komt steeds vaker voor, en volgens prognoses zal bijna de helft van de wereldbevolking er in 2050 last van hebben. Het ontwikkelen van gezondere gewoonten kan de progressie ervan helpen voorkomen.</p>
+        <br>
+            <h2>Wat is het Probleem?</h2>
+            <p>Met slechte behandeling kan bijziendheid leiden tot verschillende oogziekten zoals cataract, glaucoom, myopische maculaire degeneratie en netvliesloslating. Deze ziekten komen pas op latere leeftijd omhoog, maar beginnen zich al op jonge leeftijd te vormen.</p>
+        </div>
+    </div>
+</div>
+
+<div id="image" class="image-slider">
+  <div class="image-content"><h2>Wat ziet iemand met hoge myopie (-6D)?</h2></div>
+  <div class="slider-wrapper">
+      <img id="clearImage" src="{{ url_for('static', filename='images/bus.jpg') }}" alt="Clear Bus">
+      <img id="blurryImage" src="{{ url_for('static', filename='images/bus blurry.png') }}" alt="Blurry Bus">
+      <div id="slider" class="slider">
+          <div class="handle">
+            <div class="vertical-bar"></div>
+            <div class="text-balloon left">Myopie</div>
+            <div class="text-balloon right">Normaal</div>
+            <span class="arrow left">&#9664;</span>
+            <span class="arrow right">&#9654;</span>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+    <div id="stats" class="stats">
+      <div class="stats-content">
+        <div class="row d-flex flex-column-reverse flex-md-row">
+        <div class="col-12 col-md-6 order-1 order-md-2 graph">
+            <img src="{{ url_for('static', filename='images/graph.png') }}" alt="Graph of Myopia">
+        </div>
+        <div class="col-12 col-md-6 order-2 order-md-1 info mb-3 mb-md-0">
+                <p>In 2010 leed 28% van de wereldbevolking aan bijziendheid, wat overeenkomt met 1,95 miljard mensen. Verwacht wordt dat in 2050 50% van de bevolking bijziend zal zijn, wat neerkomt op 4,76 miljard mensen. Er wordt voorspeld dat in 2050 938 miljoen mensen zullen lijden aan hoge bijziendheid (-6D of erger), waardoor ze een groter risico lopen op ernstige oogaandoeningen.
+                    <br>Maar hoe zouden we dit kunnen voorkomen?</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <div id="rule" class="rule">
+        <div id="firstRuleContent" class="rule-content active">
+            <img src="{{ url_for('static', filename='images/20-20-2-uitleg.png') }}" alt="20-20-2 Explanation" class="img-fluid">
+        </div>
+        <div id="secondRuleContent" class="rule-content">
+            <div class="rule-details">
+                <div class="rule-item">
+                    <h3>20 Minuten</h3>
+                    <p>Na 20 minuten naar iets dat dichtbij staat te hebben gekeken, zoals lezen, telefoneren of werken op een afstand van minder dan ongeveer 30 centimeter, gun je je ogen wat rust door… →</p>
+                </div>
+                <div class="rule-item">
+                    <h3>20 Seconden</h3>
+                    <p>..20 seconden lang in de verte kijken. Kijk door je raam naar buiten of naar iets aan de andere kant van de kamer. Dit geeft je ogen wat rust nadat ze gespannen zijn door het scherpstellen op iets dichtbij. →</p>
+                </div>
+                <div class="rule-item">
+                    <h3>2 Uur</h3>
+                    <p>En laat uw kind minimaal 2 uur per dag buiten zijn. De hoeveelheid licht dat door de zon wordt uitgestraald, is veel groter dan de mens binnen kan produceren. Deze hoeveelheid licht is goed voor de oog groei. De groei van het oog gebeurt het snelst tussen de leeftijden 6 en 12 jaar.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    
+
+
+
+    <div id="hidden-costs" class="hidden-costs">
+        <div class="costs-content">
+            <div class="text-box" id="box-1">
+                <h1>Bijkomende<br>kosten van bijziendheid</h1>
+            </div>
+            <div id="explanation-box" class="text-box">
+                <p>Hoe veel kost het?</p>
+            </div>
+            <div class="icons">
+                <div class="icon" id="diseas" onclick="showText('diseas-text')">
+                    <img src="{{ url_for('static', filename='images/icons/diseas-icon.png') }}" alt="Diseas" class="img-fluid">
+                    <p id="diseas-text">Oogziekten</p>
+                </div>
+                <div class="icon" id="corrections" onclick="showText('corrections-text')">
+                    <img src="{{ url_for('static', filename='images/icons/correction-icon.png') }}" alt="Corrections" class="img-fluid">
+                    <p id="corrections-text">Correcties</p>
+                </div>
+                <div class="icon" id="visits" onclick="showText('visits-text')">
+                    <img src="{{ url_for('static', filename='images/icons/practitioner-icon.png') }}" alt="Practitioner Visits" class="img-fluid">
+                    <p id="visits-text">Bezoeken aan de arts</p>
+                </div>
+                <div class="icon" id="productivity" onclick="showText('productivity-text')">
+                    <img src="{{ url_for('static', filename='images/icons/productivity-icon.png') }}" alt="Loss of Productivity" class="img-fluid">
+                    <p id="productivity-text">Verlies van productiviteit</p>
+                </div>
+                <div class="icon" id="surgeries" onclick="showText('surgeries-text')">
+                    <img src="{{ url_for('static', filename='images/icons/surgery-icon.png') }}" alt="Surgeries" class="img-fluid">
+                    <p id="surgeries-text">Operaties</p>
+                </div>
+                <div class="icon" id="psychological" onclick="showText('psychological-text')">
+                    <img src="{{ url_for('static', filename='images/icons/psycho-icon.png') }}" alt="Psychological Impact" class="img-fluid">
+                    <p id="psychological-text">Psychologische impact</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="symptoms" class="symptoms">
+      <div class="symptoms-content">
+          <h2>Symptomen van myopie</h2>
+
+          
+          
+          
+
+  <section class="carousel-section" style="background-color: #f5f5f5; align-items: center; align-content: center;">
+    <div id="cCarousel">
+      <div class="arrow" id="prev"><i class="fa-solid fa-chevron-left"></i></div>
+      <div class="arrow" id="next"><i class="fa-solid fa-chevron-right"></i></div>
+  
+      <div id="carousel-vp">
+        <div id="cCarousel-inner">
+  
+          <article class="cCarousel-item">
+            <img src="https://em-content.zobj.net/source/apple/391/face-with-head-bandage_1f915.png" alt="Headache">
+            <div class="infos">
+              <h3>Hoofdpijn</h3>
+            </div>
+          </article>
+  
+          <article class="cCarousel-item">
+            <img src="https://em-content.zobj.net/source/apple/391/persevering-face_1f623.png" alt="Constant Squinting">
+            <div class="infos">
+              <h3>Constant Ogen Dichtknijpen</h3>
+            </div>
+          </article>
+  
+          <article class="cCarousel-item">
+            <img src="https://em-content.zobj.net/source/apple/391/eyes_1f440.png" alt="Eye Strain">
+            <div class="infos">
+              <h3>Oogpijn</h3>
+            </div>
+          </article>
+  
+          <article class="cCarousel-item">
+            <img src="https://em-content.zobj.net/source/apple/391/see-no-evil-monkey_1f648.png" alt="Rubbing eyes too often">
+            <div class="infos">
+              <h3>Vaak In Ogen Wrijven</h3>
+            </div>
+          </article>
+  
+          <article class="cCarousel-item">
+            <img src="https://em-content.zobj.net/source/apple/391/face-with-spiral-eyes_1f635-200d-1f4ab.png" alt="Blurry Vision">
+            <div class="infos">
+              <h3>Wazig Zicht</h3>
+            </div>
+          </article>
+  
+          <article class="cCarousel-item">
+            <img src="https://em-content.zobj.net/source/apple/391/selfie_1f933.png" alt="Sitting too close to the screen">
+            <div class="infos">
+              <h3>Te Dicht Bij Het Scherm Zitten</h3>
+            </div>
+          </article>
+        
+      </div>
+    </div>
+  </section>
+</div>
+</div>
+</div>
+
+<div class="tips-content">
+    <h2>Tips om kinderen te helpen bij de 20-20-2 regel</h2>
+</div>
+
+<div id="tips" class="tips">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/1.png') }}" alt="Implement the 20-20-2 rule" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#1</h1>
+                <p style="font-size: 0.85rem;">Gebruik de 20-20-2 regel, die eerder is uitgelegd.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/2.png') }}" alt="Set timers for 20 minutes" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#2</h1>
+                <p style="font-size: 0.85rem;">Begin klein met behulp van het instellen van timers of alarmen om de 20 minuten als herinnering om uw ogen een pauze te gunnen van de schermtijd.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/3.png') }}" alt="Make it a habit" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#3</h1>
+                <p style="font-size: 0.85rem;">Begin met het implementeren van de 20-20-2 regel als een gewoonte; als deze eenmaal is vastgesteld, zal dit een onderdeel zijn van de dagelijkse routine van uw kinderen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/4.png') }}" alt="Educate your children" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#4</h1>
+                <p style="font-size: 0.85rem;">Leg de 20-20-2-regel aan uw kinderen uit om hen voor te lichten over het gezond houden van hun ogen en de gevolgen van bijziendheid.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/5.png') }}" alt="Encourage outdoor play" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#5</h1>
+                <p style="font-size: 0.85rem;">Motiveer uw kinderen om buiten te spelen. Dit voldoet niet alleen aan de dagelijkse 2 uur buiten zijn, maar draagt ook bij aan het algehele fysieke welzijn.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/6.png') }}" alt="Limit screen time" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#6</h1>
+                <p style="font-size: 0.85rem;">Houd bij hoeveel tijd uw kind achter schermen doorbrengt, stel indien nodig limieten in en moedig hem aan om deel te nemen aan activiteiten buiten het scherm.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/7.png') }}" alt="Know what to do in the 20 seconds" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#7</h1>
+                <p style="font-size: 0.85rem;">Wees creatief bij het omzetten van de pauze van 20 seconden en 2 uur buitenplezier. Dit kan heel klein zijn, zoals het spotten van vogels of gaan picknicken en schilderen in de natuur.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/8.png') }}" alt="Designate break spaces" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#8</h1>
+                <p style="font-size: 0.85rem;">Wijs plekken in het klaslokaal aan waar leerlingen naartoe kunnen gaan om hun ogen te richten op iets ver weg, zoals een raam met uitzicht.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/9.png') }}" alt="Plan outdoor lessons at school" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#9</h1>
+                <p style="font-size: 0.85rem;">Maak lessen leuker door deze buiten te houden of waar mogelijk buitenactiviteiten te doen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/10.png') }}" alt="Optimize layout of classrooms" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#10</h1>
+                <p style="font-size: 0.85rem;">Zorg ervoor dat uw klaslokaal goed verlicht is en dat digitale schermen op de juiste manier zijn geplaatst om verblinding te verminderen en te voorkomen dat leerlingen te dicht bij de schermen zitten.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/11.png') }}" alt="Regularly ask for feedback" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#11</h1>
+                <p style="font-size: 0.85rem;">Vraag regelmatig feedback van leerlingen over oog zorgen in de klas en wees flexibel om je aan te passen aan hun feedback.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="{{ url_for('static', filename='images/tips/cards_dutch/12.png') }}" alt="Be a good role model" style="width:300px;height:182px;">
+              </div>
+              <div class="flip-card-back">
+                <h1>#12</h1>
+                <p style="font-size: 0.85rem;">Kinderen volgen de dingen die ze waarnemen. Als u de 20-20-2-regel zelf in praktijk brengt, worden uw kinderen dus aangemoedigd om ook mee te doen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+  </div>
+
+
+<div id="footer" class="footer">
+    <div class="container d-flex justify-content-between">
+        <div id="contacts" class="footer-item">
+            <h2>Neem Contact Op</h2>
+            <p>Email:</p>
+            <p>Telefoon:</p>
+            <p>Adres:</p>
+        </div>
+
+        <div id="credits" class="footer-item">
+            <h2>Credits</h2>
+            <p>Mark Temchenko</p>
+            <p>Merijn Vervoorn</p>
+            <p>Viktor Nobel</p>
+            <p>Nikko Chy</p>
+            <p>Felicia Christy Leo</p>
+            <p>Alejandro Berges Coronel</p>
+        </div>
+
+        <div id="Downloads" class="footer-item">
+            <h2>Downloads</h2>
+            <ul>
+                <li><a href=".\static\Myopia Slides for Teachers.pptx" target="_blank" class="btn btn-dark" role="button">Presentatie voor docenten</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script>
+        
+
+        /*Rule*/
+        document.addEventListener('scroll', function() {
+        const ruleItems = document.querySelectorAll('.rule-item');
+        ruleItems.forEach((item, index) => {
+            const rect = item.getBoundingClientRect();
+            if (rect.top < window.innerHeight && rect.bottom > 0) {
+                setTimeout(() => {
+                    item.classList.add('visible');
+                }, index * 200); // Stagger the fade-in effect
+            } else {
+                item.classList.remove('visible');
+            }
+        });
+    });
+
+        
+        /*Costs*/
+        var textMap = {
+        'corrections-text': "Brillen en andere correcties kunnen helpen om het probleem in het moment te verhelpen, maar ze vertragen de progressie van bijziendheid niet. Afhankelijk van het merk en de sterkte heeft een bril een hoge instapprijs. Contactlenzen hebben een frequentere kostprijs.",
+        'visits-text': 'Regelmatige controles bij oogartsen zijn noodzakelijk om de progressie te volgen. Jaarlijkse oog controles worden aanbevolen.',
+        'productivity-text': 'Hoofdpijn en wazig zicht kunnen de productiviteit op het werk of op school verminderen, wat op de langere termijn tot indirecte kosten leidt.',
+        'surgeries-text': 'In ernstige gevallen kunnen chirurgische ingrepen nodig zijn om het gezichtsvermogen te corrigeren, wat tot hoge medische kosten leidt. Bij operaties bestaat soms het risico op bijwerkingen en complicaties.',
+        'psychological-text': 'De frustraties die gepaard gaan met het omgaan met problemen in het gezichtsvermogen kunnen de geestelijke gezondheid beïnvloeden. Stress kan de vorm aannemen van te hoge prijzen, of zelfs van het zelfbewustzijn van het niet kunnen lezen van teksten in de verte.',
+        'diseas-text': "Bijziendheid kan leiden tot verschillende oogziekten, zoals staar, glaucoom, myopische maculaire degeneratie en netvliesloslating. Deze ziekten komen pas op latere leeftijd omhoog, maar beginnen zich al op jonge leeftijd te vormen."
+    };
+
+    let currentIndex = 0;
+    const icons = document.querySelectorAll('.icon');
+    const explanationBox = document.getElementById('explanation-box');
+
+    function showText(id) {
+        icons.forEach(icon => icon.classList.remove('active'));
+        document.getElementById(id.replace('-text', '')).classList.add('active');
+        explanationBox.querySelector('p').innerText = textMap[id];
+    }
+
+    function showNextIcon() {
+        icons[currentIndex].classList.remove('active');
+        currentIndex = (currentIndex + 1) % icons.length;
+        const nextIconId = icons[currentIndex].id + '-text';
+        showText(nextIconId);
+    }
+
+    let slideshowInterval = setInterval(showNextIcon, 5000);
+
+    icons.forEach((icon, index) => {
+        icon.addEventListener('click', () => {
+            clearInterval(slideshowInterval);
+            currentIndex = index;
+            showText(icon.id + '-text');
+            slideshowInterval = setInterval(showNextIcon, 5000);
+        });
+    });
+
+    // Initialize the slideshow with the first icon
+    showText(icons[0].id + '-text');
+
+
+        /*Tips*/
+        function toggleExpand(element) {
+    const tipItems = document.querySelectorAll('.tip-item');
+
+    if (element.classList.contains('expanded')) {
+        element.classList.remove('expanded');
+        tipItems.forEach(item => item.classList.remove('hidden'));
+    } else {
+        tipItems.forEach(item => {
+            if (item !== element) item.classList.add('hidden');
+        });
+        element.classList.add('expanded');
+    }
+}
+
+
+const prev = document.querySelector("#prev");
+const next = document.querySelector("#next");
+
+let carouselVp = document.querySelector("#carousel-vp");
+
+let cCarouselInner = document.querySelector("#cCarousel-inner");
+let carouselInnerWidth = cCarouselInner.getBoundingClientRect().width;
+
+let leftValue = 0;
+
+// Variable used to set the carousel movement value (card's width + gap)
+const totalMovementSize =
+  parseFloat(
+    document.querySelector(".cCarousel-item").getBoundingClientRect().width,
+    10
+  ) +
+  parseFloat(
+    window.getComputedStyle(cCarouselInner).getPropertyValue("gap"),
+    10
+  );
+
+prev.addEventListener("click", () => {
+  if (!leftValue == 0) {
+    leftValue -= -totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+  }
+});
+
+next.addEventListener("click", () => {
+  const carouselVpWidth = carouselVp.getBoundingClientRect().width;
+  if (carouselInnerWidth - Math.abs(leftValue) > carouselVpWidth) {
+    leftValue -= totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+  }
+});
+
+const mediaQuery510 = window.matchMedia("(max-width: 510px)");
+const mediaQuery770 = window.matchMedia("(max-width: 770px)");
+
+mediaQuery510.addEventListener("change", mediaManagement);
+mediaQuery770.addEventListener("change", mediaManagement);
+
+let oldViewportWidth = window.innerWidth;
+
+function mediaManagement() {
+  const newViewportWidth = window.innerWidth;
+
+  if (leftValue <= -totalMovementSize && oldViewportWidth < newViewportWidth) {
+    leftValue += totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+    oldViewportWidth = newViewportWidth;
+  } else if (
+    leftValue <= -totalMovementSize &&
+    oldViewportWidth > newViewportWidth
+  ) {
+    leftValue -= totalMovementSize;
+    cCarouselInner.style.left = leftValue + "px";
+    oldViewportWidth = newViewportWidth;
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  function scrollToElement(element, offset = 0) {
+    const headerHeight = document.querySelector('nav').offsetHeight;
+    const elementPosition = element.getBoundingClientRect().top + window.scrollY;
+    const offsetPosition = elementPosition - headerHeight - offset;
+    
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: 'smooth'
+    });
+  }
+
+  // Add event listener to the "Visuals" link in the navbar
+  document.querySelector('a[href="#image"]').addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetElement = document.querySelector('#image');
+    scrollToElement(targetElement, 20); // Add some extra offset if needed
+  });
+  const clearImage = document.getElementById('clearImage');
+  const blurryImage = document.getElementById('blurryImage');
+  const slider = document.getElementById('slider');
+  const handle = slider.querySelector('.handle');
+  const sliderWrapper = document.querySelector('.slider-wrapper');
+
+  let isDragging = false;
+
+  // Initial split of the images
+  function updateClip(offsetX) {
+    blurryImage.style.clip = `rect(0, ${offsetX}px, auto, 0)`;
+  }
+
+  // Start with the slider in the middle
+  function centerSlider() {
+    const initialOffsetX = sliderWrapper.offsetWidth / 2;
+    updateClip(initialOffsetX);
+    slider.style.left = initialOffsetX + 'px';
+  }
+
+  // Center the slider on initial load and on window resize
+  centerSlider();
+  window.addEventListener('resize', centerSlider);
+
+  slider.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    e.preventDefault();  // Prevent text selection
+  });
+
+  document.addEventListener('mousemove', function(e) {
+    if (isDragging) {
+      let rect = sliderWrapper.getBoundingClientRect();
+      let offsetX = e.clientX - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      slider.style.left = offsetX + 'px';
+      updateClip(offsetX);
+    }
+  });
+
+  document.addEventListener('mouseup', function() {
+    isDragging = false;
+  });
+
+  sliderWrapper.addEventListener('touchstart', function(e) {
+    isDragging = true;
+    e.preventDefault();  // Prevent text selection
+  });
+
+  document.addEventListener('touchmove', function(e) {
+    if (isDragging) {
+      let touch = e.touches[0];
+      let rect = sliderWrapper.getBoundingClientRect();
+      let offsetX = touch.clientX - rect.left;
+      if (offsetX < 0) offsetX = 0;
+      if (offsetX > rect.width) offsetX = rect.width;
+      slider.style.left = offsetX + 'px';
+      updateClip(offsetX);
+    }
+  });
+
+  document.addEventListener('touchend', function() {
+    isDragging = false;
+  });
+});
+
+    </script>
+</body>
+</html>
+</body>
+</html>
